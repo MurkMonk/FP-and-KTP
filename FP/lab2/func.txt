@@ -1,0 +1,70 @@
+--Типовые переменные
+head [1,2,3,4]
+fst (2,3)
+
+--Классы типов 
+(==) 3 5  (==) 4 4
+
+-- Класс Eq
+4 == 4  5==4
+5/=5    5/=4
+"gigi" == "shagi"   "gigi"/="shagi"
+
+--Класс Ord
+"Хаскель" < "Программа топ"
+"Хаскель" `compare` "Программа топ"
+
+--Класс Show
+show 67 show "345"
+
+--Класс Read
+read "345" + 229
+read "8.2" - 3.8
+
+read "25" :: Int
+read "25" :: Float
+read "25" :: Double
+
+--Класс Enum
+['a'..'c']
+[1,1,2..13] [1..13]
+succ 'n' succ 'z'
+
+--Класс Bounded
+minBound :: Int     maxBound:: Int
+minBound :: Integer     maxBound:: Integer
+
+maxBound :: (Bool, Integer, Double)
+maxBound :: (Bool, Int, Char)
+
+--Класс Num
+25::Bool
+25::Int
+35::Float
+
+--Класс Floating
+sin 90     cos 89
+
+--Класс Integral
+fromIntegral (length [1,4]) + 3.2
+
+--Функция replicate
+replicate 3 7
+
+--Функция take
+take 3 []   take 3 [2,3,5,6,7]
+
+--Функция reverse
+reverse [1,2,3,4,5]
+
+--Функция repeat
+repeat 3
+take 4 (repeat 3)
+
+--Функция zip
+zip [1,2,3] ['a','b']
+zip [1,2,3] ['a','b','c']
+
+--Функция elem
+elem 3 [2,2,1]
+elem 3 [2,3,1]

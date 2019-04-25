@@ -1,0 +1,8 @@
+["R","M","F","G","H","J","J","G","D"]  ["2","3","4","5","6","7","8"]
+["U","N","Y","L","O","O","P"]
+
+f a b c = if (((mod a 2) == 1)&&((mod b 2)==1)&&((mod c 2)==1)) then [log a, log b, log c] else if f(-x)=-f(x) then [arg^(2) a, arg^(2) b, arg^(2) c] 
+
+f a = if (((mod a 2) == 0) then arg^(2) a else if f(-a)=f(a) then log a
+
+f a b c = if (((mod a 2) == 0)&&((mod b 2)==0)&&((mod c 2)==0)) then [a^3, b^3, c^3] else [a+b+c] ***
