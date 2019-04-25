@@ -1,0 +1,15 @@
+body {    
+     background: #1abc9c;     
+	 font-family: Tahoma, Arial, serif;     
+	 color: #333; 
+	 } 
+	 table {    
+	 border-collapse: collapse; 
+	 } 
+	 p, h4 {    font-size: 14px;     margin-bottom: 0; 
+	 } 
+	 ul, ol {    margin: 0 
+	 } 
+	 table tr td {    
+	 padding: 5px 
+	 } 
