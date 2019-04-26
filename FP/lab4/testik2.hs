@@ -12,7 +12,9 @@ main = do
     x <- getLine
     putStrLn "Введите слово, на которое нужно заменить"
     y <- getLine
-    hPutStr out $ replace x y wrds
+    let res = replace x y wrds
+    hPutStr out res
+    putStrLn res
     hClose handle
     hClose out
 
