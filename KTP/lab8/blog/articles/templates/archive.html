@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Архив всех статей</title>
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/article.css">
+    </head>
+    <body>
+        <div class="header">
+            <a href="/article/new">Создать статью</a><br>
+            <a href="/registration">Регистрация</a> <br>
+            <a href="/auth">Авторизация</a>
+            <p class="center_pos"><img id="logo" src="{{ STATIC_URL }}img/django-logo-.png" height="100"/></p>
+        </div>
+        <div  class="archive">
+            {% for post in posts %}
+            <div class="one-post">
+                    <h2 class="post-title">
+                        <a href="/article/{{ post.id }}">{{ post.title }}</a>
+                    </h2>
+                    <p class="fold-button">Свернуть</p>
+                <div class="article-info">
+                    <div class="article-author">{{ post.author.username }}</div>
+                    <div class="article-created-date">{{ post.created_date }}</div>
+                </div>
+                <p class="article-text">{{ post.get_excerpt }}</p>
+                <div class="one-post-shadow"></div>
+            </div>
+            {% endfor %}
+        </div>
+        <script src="{{ STATIC_URL }}js/jquery-3.4.0.min.js"></script>
+        <script src="{{ STATIC_URL }}js/fold-post.js"></script>
+        <script src="/static/js/helloworld.js"></script>
+        <script src="{{ STATIC_URL }}js/highlight-post.js"></script>
+    </body>
+</html>
