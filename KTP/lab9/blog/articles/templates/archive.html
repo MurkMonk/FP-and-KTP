@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/article.css" type="text/css">
+    <link rel="icon" href="/static/img/fire.png" sizes="16x16 32x32 64x64 128x128" type="image/png">
+    <title>Архив всех статей</title>
+</head>
+<body>
+
+
+<div class="header">
+    <p class="center_pos"><img id="logo" width="15%" src="/static/img/dpb-logo_orange.png"/></p>
+    <div class="head-title">
+        <p class="service_title center_pos">Коллективный блог</p>
+        <a href="/article/new" class="create_link center_pos" style="color: #ff4780">Создать статью</a>
+        <a href="/signup" class="reg_link center_pos" style="color: #ff4780">Регистрация</a>
+        <a href="/auth" class="login_link center_pos" style="color: #ff4780">Авторизация</a>
+    </div>
+    <div class="parallax_group">
+        <img class="first_img" src="/static/img/file.png"/>
+        <img class="second_img" src="/static/img/file.png"/>
+        <img class="third_img" src="/static/img/file.png"/>
+    </div>
+</div>
+
+<!--<div class="archiveHeader">-->
+<!--    <a href="signup">Зарегестрироваться</a>-->
+<!--    <a href="auth">Войти</a>-->
+<!--    <a href="article/new">Новая статья</a>-->
+<!--    <p class="center_pos"> <img id="logo" width="15%" src="/static/img/dpb-logo_purple.png"/></p>-->
+<!--</div>-->
+<div class="archive">
+    {% for post in posts %}
+    <div class="one-post">
+        <div class="fold-button" style="text-decoration: underline">{{ "Свернуть" }}</div>
+        <a href="/article/{{ post.id }}/">
+            <h2 class="post-title">{{ post.title }}</h2></a>>
+        <div class="article-info">
+            <div class="article-author">{{ post.author.username }}</div>
+            <div class="article-created-date">{{ post.created_date }}</div>
+        </div>
+        <p class="article-text">{{ post.get_excerpt }}</p>
+        <div class="one-post-shadow"></div>
+    </div>
+    {% endfor %}
+</div>
+<script src="/static/js/fold-post.js"></script>
+<script src="/static/js/jquery-3.4.0.min.js"></script>
+<script src="/static/js/highlight-post.js"></script>
+<script src="/static/js/parallax.js"></script>
+</body>
+</html>

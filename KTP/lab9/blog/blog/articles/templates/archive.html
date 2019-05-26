@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Архив всех статей</title>
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/article.css">
+    </head>
+    <body class="archive">
+        <div class="header">
+            <a href="/article/new">Создать статью</a><br>
+            <a href="/registration">Регистрация</a> <br>
+            <a href="/auth">Авторизация</a>
+           <p class="center_pos">  <img src="{{ STATIC_URL }}img/django-logo-.png" height="100"/> </p>
+        </div>
+        <div class="archive">
+            {% for post in posts %}
+            <div class="one-post">
+                <a href="/article/{{ post.id }}">
+                <h2 class="post-title">{{ post.title }}</h2>
+                </a>
+                <div class="article-info">
+                    <div class="article-author">{{ post.author.username }}</div>
+                    <div class="article-created-date">{{ post.created_date }}</div>
+                </div>
+                <p class="article-text">{{ post.get_excerpt }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,175 @@
+body {
+    background: #808080;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #f5f8ff;
+}
+
+div {
+    display: block;
+}
+
+.archive {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.article {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    display: inline-block;
+    width: 100%;
+    height: 500px;
+    background-color: #FAEBD7;
+    position: relative;
+}
+
+img#logo {
+    top: 0;
+    position: relative;
+}
+
+.archiveHeader a {
+    float: right;
+    text-align: right;
+    padding: 10px;
+}
+
+.article-info div {
+    display: inline;
+}
+
+.article-created-date {
+    float: right;
+    text-align: right;
+}
+
+.fold-button {
+    float: right;
+    text-align: right;
+}
+
+.center_pos {
+    text-align: center;
+}
+
+.article-text {
+    text-align: justify;
+}
+
+a:link {
+    color: #bbfff3;
+}
+
+a:visited {
+    color: #fff7b2;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+.one-post {
+    position: relative;
+}
+
+.one-post.folded .article-author {
+    display: none;
+}
+
+.one-post.folded .article-created-date {
+    display: none;
+}
+
+.one-post.folded .article-text {
+    display: none;
+}
+
+.one-post-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    z-index: -1;
+    opacity: 0;
+}
+
+.header-text-area {
+    float: left;
+    width: 50%;
+}
+
+.register-link {
+
+}
+
+.head-title {
+    float: left;
+    width: 50%;
+    height: 400px;
+}
+
+.service_title {
+    font-size: 30pt;
+    color: orange;
+}
+
+.create_link {
+    float: left;
+    font-size: 18pt;
+    margin-left: 5%;
+    width: 30%;
+}
+
+.reg_link {
+    float: left;
+    font-size: 18pt;
+    width: 30%;
+}
+
+.login_link {
+    float: right;
+    font-size: 18pt;
+    width: 30%;
+}
+
+.parallax_group {
+    float: right;
+    width: 50%;
+    height: 300px;
+    position: relative;
+}
+
+.parallax_group img {
+    position: absolute;
+    top: 0;
+}
+
+.first_img {
+    margin-top: 100px;
+    margin-left: 50%;
+    height: 60%;
+    z-index: 3;
+    /* эта картинка на переднем плане, у неё больший z-index
+   */
+}
+
+.second_img {
+    height: 45%; /* уменьшить ширину для картинки, чтобы визуально */
+    /* находилась дальше для пользователя */
+    margin-top: 40px; /* эта картинка слегка смещена вправо и вниз */
+    margin-left: 60%; /* за счет левой и верхней границ */
+    z-index: 2;
+}
+
+.third_img {
+    height: 30%;
+    margin-left: 68%;
+    z-index: 1; /* эта картинка на заднем плане, у неё меньший z-index */
+}
